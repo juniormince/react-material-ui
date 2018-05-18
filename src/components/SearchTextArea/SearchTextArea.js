@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 // const Component = React.Component; --destructuring means i don't need this line
 import TextField from '@material-ui/core/TextField';
 
 
 
-class SearchTextArea extends Component {
-
-
-    render() {
-        return (
-            <TextField placeholder="search stuff"/>
+const SearchTextArea = (props) => (
+            <TextField onChange={props.handleChangeForChild('newSearch')} placeholder="search stuff"/>
         );
-    }
-}
 
 export default SearchTextArea;

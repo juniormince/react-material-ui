@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import { Search } from '@material-ui/icons'; //destructuring 
 
-class SearchButton extends Component {
-  render() {
-    return (
-        <Button 
+const SearchButton = (props) => (
+        <Button onSubmit ={props.handleSubmitForChild}
         variant="raised" 
         color="primary"
         >
@@ -14,7 +12,5 @@ class SearchButton extends Component {
         </Button>
 
     );
-  }
-}
 
 export default SearchButton;

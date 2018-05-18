@@ -26,16 +26,16 @@ class App extends Component {
     // Keep track of the student list
     this.state = {
       search: [],
+      newSearch: '',
     };
 
   }
 
   handleChangeFor = (propertyName) => (event) => {
+    console.log(this.state.newSearch);
     this.setState({
-      newSearch: {
-        ...this.state.newSearch,
         [propertyName]: event.target.value,
-      }
+      
     });
   }
 
@@ -43,6 +43,7 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state.search);
     this.setState({
       newSearch: {
         input: '',
@@ -58,8 +59,8 @@ class App extends Component {
           {/* hey world */}
           <SearchTextArea 
           newSearch={this.state.newSearch}
-          handleChangeFor={this.handleChangeFor}
-          handleSubmit={this.handleSubmit} 
+          handleChangeForChild={this.handleChangeFor}
+          handleSubmitForChild={this.handleSubmit} 
           />
           <SearchButton 
           />
