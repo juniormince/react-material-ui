@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { Search } from '@material-ui/icons'; //destructuring 
 
 const SearchButton = (props) => (
-        <Button onSubmit ={props.handleSubmitForChild}
+        <Button onClick ={props.handleSubmitForChild}
         variant="raised" 
         color="primary"
         >

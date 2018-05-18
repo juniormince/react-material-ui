@@ -25,7 +25,7 @@ class App extends Component {
     super(props);
     // Keep track of the student list
     this.state = {
-      search: [],
+      // search: [],
       newSearch: '',
     };
 
@@ -43,12 +43,10 @@ class App extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.search);
-    this.setState({
-      newSearch: {
-        input: '',
-      }
-    });
+    console.log(this.state.newSearch);
+    // this.setState({
+    //   newSearch: ''
+    // });
   }
 
 
@@ -60,9 +58,9 @@ class App extends Component {
           <SearchTextArea 
           newSearch={this.state.newSearch}
           handleChangeForChild={this.handleChangeFor}
-          handleSubmitForChild={this.handleSubmit} 
           />
           <SearchButton 
+          handleSubmitForChild={this.handleSubmit}
           />
         </div>
       </MuiThemeProvider>
